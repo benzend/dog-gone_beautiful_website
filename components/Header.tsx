@@ -76,7 +76,9 @@ export default function Header() {
   const classes = useStyles();
 
   useEffect(() => {
-    setAnimate(true);
+    setTimeout(() => {
+      setAnimate(true);
+    }, 200);
   }, []);
   return (
     <Box

@@ -161,7 +161,9 @@ export default function Nav() {
   const [animate, setAnimate] = useState<boolean>(false);
   const [navActive, setNavActive] = useState<boolean>(false);
   useEffect(() => {
-    setAnimate(true);
+    setTimeout(() => {
+      setAnimate(true);
+    }, 300);
   }, []);
   const classes = useStyles();
   return (
