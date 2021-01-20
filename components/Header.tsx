@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "70vh",
     opacity: 0,
-    transition: "all .3s .4s ease",
+    transition: "all .3s ease",
     [theme.breakpoints.down("sm")]: {
       height: "600px",
     },

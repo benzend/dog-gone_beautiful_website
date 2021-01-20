@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     padding: "1rem",
     opacity: 0,
-    transition: "all .4s 1s ease",
+    transition: "all .4s ease",
     zIndex: 10,
     ["&.animate"]: {
       opacity: 1,
