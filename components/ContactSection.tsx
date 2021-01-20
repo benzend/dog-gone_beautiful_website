@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Box, Container, Divider, makeStyles } from "@material-ui/core";
 import { Business, PhoneAndroid } from "@material-ui/icons";
 const useStyles = makeStyles((theme) => ({
