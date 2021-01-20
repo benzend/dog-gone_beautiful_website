@@ -158,14 +158,14 @@ export default function Nav() {
   return (
     <Box className={classes.nav} component="nav">
       <Container className={classes.navContainer}>
-        <Box className={classes.logo}>
+        <a href="#home" className={classes.logo}>
           <Image
             src="/images/dog-on_logo.jpg"
             alt="dog-gone logo"
             width="121px"
             height="121px"
           />
-        </Box>
+        </a>
         <Box
           className={
             navActive ? classes.navLinks + " active" : classes.navLinks
