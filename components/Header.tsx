@@ -58,6 +58,10 @@ const useStyles = makeStyles((theme) => ({
       boxShadow: "8px 8px 8px #0004",
       transform: "scale(1.03)",
     },
+    [theme.breakpoints.down("xs")]: {
+      width: "250px",
+      height: "70px",
+    },
   },
 }));
 
