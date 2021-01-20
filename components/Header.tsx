@@ -7,6 +7,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     height: "70vh",
+    [theme.breakpoints.down("sm")]: {
+      height: "600px",
+    },
+    [theme.breakpoints.down("xs")]: {},
   },
   headerImage: {
     borderRadius: 14,
@@ -23,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       height: "140px",
     },
     [theme.breakpoints.down("xs")]: {
-      height: "100px",
+      height: "90px",
     },
   },
   headerText: {

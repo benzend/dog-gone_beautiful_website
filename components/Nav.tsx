@@ -20,6 +20,12 @@ const useStyles = makeStyles((theme) => ({
     padding: "1rem",
     zIndex: 10,
   },
+  logo: {
+    [theme.breakpoints.down("xs")]: {
+      width: "40px",
+      height: "40px",
+    },
+  },
   navContainer: {
     display: "flex",
     justifyContent: "space-between",
@@ -152,7 +158,7 @@ export default function Nav() {
   return (
     <Box className={classes.nav} component="nav">
       <Container className={classes.navContainer}>
-        <Box>
+        <Box className={classes.logo}>
           <Image
             src="/images/dog-on_logo.jpg"
             alt="dog-gone logo"

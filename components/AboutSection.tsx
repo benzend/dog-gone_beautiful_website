@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       height: "1000px",
     },
   },
@@ -18,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "100%",
     zIndex: -10,
-    [theme.breakpoints.down("xs")]: {
-      height: "880px",
+    [theme.breakpoints.down("sm")]: {
+      height: "1000px",
     },
   },
 
@@ -27,7 +27,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
-  image: {},
+  image: {
+    [theme.breakpoints.down("sm")]: {
+      height: "300px",
+      width: "300px",
+    },
+  },
   textContainer: {
     width: 800,
     padding: "0 2rem",
@@ -70,7 +75,7 @@ export default function AboutSection() {
       <div className={classes.bg}></div>
       <Container>
         <Grid container className={classes.content}>
-          <Grid item>
+          <Grid className={classes.image} item>
             <Image
               src="/images/dog-on_pitbull.jpg"
               width={400}

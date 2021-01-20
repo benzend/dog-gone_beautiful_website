@@ -8,7 +8,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import DogCard from "./DogCard";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     fontFamily: "Montserrat, sans-serif",
   },
@@ -46,13 +46,16 @@ const useStyles = makeStyles({
     maxWidth: "380px",
     height: "450px",
     borderRadius: "30px",
+    [theme.breakpoints.down("xs")]: {
+      height: "510px",
+    },
   },
   textContainer: {
     padding: "0 3rem",
     textAlign: "center",
     color: "#444",
   },
-});
+}));
 export default function SatisfiedDogsSection() {
   const classes = useStyles();
   return (

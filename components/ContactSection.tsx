@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Box, Container, Divider, makeStyles } from "@material-ui/core";
 import { Business, PhoneAndroid } from "@material-ui/icons";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   section: {
     position: "relative",
     marginTop: "7%",
@@ -23,6 +23,9 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
+    [theme.breakpoints.down("sm")]: {
+      height: "800px",
+    },
   },
   textContainer: {
     height: "44%",
@@ -50,7 +53,7 @@ const useStyles = makeStyles({
     boxShadow: "4px 4px 4px #0005",
     cursor: "pointer",
   },
-});
+}));
 
 export default function ContactSection() {
   const classes = useStyles();
