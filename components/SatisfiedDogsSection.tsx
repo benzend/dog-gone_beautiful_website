@@ -1,12 +1,4 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Container,
-  Grid,
-  makeStyles,
-} from "@material-ui/core";
+import { Box, Container, Grid, makeStyles } from "@material-ui/core";
 import DogCard from "./DogCard";
 const useStyles = makeStyles((theme) => ({
   root: {

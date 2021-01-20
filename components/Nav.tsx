@@ -1,15 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
 
-import {
-  Box,
-  Container,
-  Grid,
-  Card,
-  makeStyles,
-  IconButton,
-} from "@material-ui/core";
-import { Facebook, Instagram } from "@material-ui/icons";
+import { Box, Container, makeStyles, IconButton } from "@material-ui/core";
+import { Facebook } from "@material-ui/icons";
 import { useEffect, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -115,7 +107,6 @@ const useStyles = makeStyles((theme) => ({
     left: "-10px",
     height: "40px",
     width: "40px",
-    // background: "red",
   },
   hamLineTop: {
     position: "absolute",
@@ -238,11 +229,6 @@ export default function Nav() {
                 <Facebook />
               </IconButton>
             </a>
-            {/* <a href="https://instagram.com">
-              <IconButton>
-                <Instagram />
-              </IconButton>
-            </a> */}
           </Box>
         </Box>
       </Container>

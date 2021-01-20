@@ -1,22 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import {
-  Box,
-  Container,
-  Grid,
-  Card,
-  makeStyles,
-  IconButton,
-  Avatar,
-  CardContent,
-  CardMedia,
-} from "@material-ui/core";
-import { Facebook, Instagram, House, Phone } from "@material-ui/icons";
+import { makeStyles } from "@material-ui/core";
 import Nav from "../components/Nav";
 import Header from "../components/Header";
 import AboutSection from "../components/AboutSection";
-import { url } from "inspector";
 import SatisfiedDogsSection from "../components/SatisfiedDogsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
