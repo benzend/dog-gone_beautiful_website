@@ -44,7 +44,7 @@ const useStyles = makeStyles({
   },
   card: {
     maxWidth: "380px",
-    height: "420px",
+    height: "450px",
     borderRadius: "30px",
   },
   textContainer: {
@@ -56,9 +56,9 @@ const useStyles = makeStyles({
 export default function SatisfiedDogsSection() {
   const classes = useStyles();
   return (
-    <Box className={classes.section} component="section">
-      <h2 className={classes.title}>Meet My Satisfied Dogs</h2>
+    <Box id="services" className={classes.section} component="section">
       <Container>
+        <h2 className={classes.title}>Meet My Satisfied Dogs</h2>
         <Grid spacing={3} justify="center" alignItems="center" container>
           <Grid item>
             <DogCard classes={classes} imageStyle={classes.card1Image} />

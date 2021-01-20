@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Box, Container, makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
@@ -16,6 +16,15 @@ const useStyles = makeStyles({
     height: "271px",
     margin: "auto",
     boxShadow: "4px 4px 4px #0005",
+    [theme.breakpoints.down("md")]: {
+      height: "200px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "140px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "100px",
+    },
   },
   headerText: {
     fontSize: "3rem",
@@ -46,12 +55,12 @@ const useStyles = makeStyles({
       transform: "scale(1.03)",
     },
   },
-});
+}));
 
 export default function Header() {
   const classes = useStyles();
   return (
-    <Box component="header" className={classes.root}>
+    <Box id="home" component="header" className={classes.root}>
       <Container>
         <div className={classes.headerImage}></div>
         <h1 className={classes.headerText}>

@@ -2,12 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { Box, Container, Divider, Grid, makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   section: {
     height: "100vh",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      height: "1000px",
+    },
   },
   bg: {
     position: "absolute",
@@ -15,7 +18,11 @@ const useStyles = makeStyles({
     height: "100%",
     width: "100%",
     zIndex: -10,
+    [theme.breakpoints.down("xs")]: {
+      height: "880px",
+    },
   },
+
   content: {
     justifyContent: "center",
     alignItems: "center",
@@ -54,12 +61,12 @@ const useStyles = makeStyles({
       boxShadow: "8px 8px 7px #00045",
     },
   },
-});
+}));
 
 export default function AboutSection() {
   const classes = useStyles();
   return (
-    <Box className={classes.section} component="section">
+    <Box id="about" className={classes.section} component="section">
       <div className={classes.bg}></div>
       <Container>
         <Grid container className={classes.content}>

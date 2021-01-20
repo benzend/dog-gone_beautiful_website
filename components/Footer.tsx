@@ -5,7 +5,9 @@ const useStyles = makeStyles({
     height: "75px",
     display: "flex",
     alignItems: "center",
-    padding: "0 2rem",
+  },
+  madeunlinkedText: {
+    marginRight: "20px",
   },
   dogGoneText: {
     fontWeight: "bold",
@@ -17,9 +19,11 @@ export default function Footer() {
   return (
     <Box className={classes.root} component="footer">
       <Container>
-        <Grid spacing={7} container>
+        <Grid container>
           <Grid item>
-            <small>Copyright @ MadeUnlinked</small>
+            <small className={classes.madeunlinkedText}>
+              Copyright @ MadeUnlinked
+            </small>
           </Grid>
           <Grid item>
             <small>

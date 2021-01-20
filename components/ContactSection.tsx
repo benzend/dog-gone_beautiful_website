@@ -55,7 +55,7 @@ const useStyles = makeStyles({
 export default function ContactSection() {
   const classes = useStyles();
   return (
-    <Box className={classes.section} component="section">
+    <Box id="contact" className={classes.section} component="section">
       <Box className={classes.bgContainer}></Box>
       <Container>
         <Box className={classes.content}>
