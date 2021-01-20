@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Box, Container, makeStyles } from "@material-ui/core";
+import { useEffect, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -7,10 +8,15 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     height: "70vh",
+    opacity: 0,
+    transition: "all .3s .4s ease",
     [theme.breakpoints.down("sm")]: {
       height: "600px",
     },
     [theme.breakpoints.down("xs")]: {},
+    ["&.animate"]: {
+      opacity: 1,
+    },
   },
   headerImage: {
     borderRadius: 14,
@@ -66,9 +72,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Header() {
+  const [animate, setAnimate] = useState<boolean>(false);
   const classes = useStyles();
+
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
   return (
-    <Box id="home" component="header" className={classes.root}>
+    <Box
+      id="home"
+      component="header"
+      className={animate ? classes.root + " animate" : classes.root}
+    >
       <Container>
         <div className={classes.headerImage}></div>
         <h1 className={classes.headerText}>

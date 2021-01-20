@@ -10,7 +10,7 @@ import {
   IconButton,
 } from "@material-ui/core";
 import { Facebook, Instagram } from "@material-ui/icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   nav: {
@@ -18,7 +18,12 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     left: 0,
     padding: "1rem",
+    opacity: 0,
+    transition: "all .4s 1s ease",
     zIndex: 10,
+    ["&.animate"]: {
+      opacity: 1,
+    },
   },
   logo: {
     [theme.breakpoints.down("xs")]: {
@@ -153,10 +158,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Nav() {
-  const classes = useStyles();
+  const [animate, setAnimate] = useState<boolean>(false);
   const [navActive, setNavActive] = useState<boolean>(false);
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
+  const classes = useStyles();
   return (
-    <Box className={classes.nav} component="nav">
+    <Box
+      className={animate ? classes.nav + " animate" : classes.nav}
+      component="nav"
+    >
       <Container className={classes.navContainer}>
         <a href="#home" className={classes.logo}>
           <Image
