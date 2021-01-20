@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Box, Container, makeStyles, IconButton } from "@material-ui/core";
 import { Facebook } from "@material-ui/icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   nav: {
@@ -10,14 +10,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     left: 0,
     padding: "1rem",
-    opacity: 0,
-    transform: "translateY(-50px)",
-    transition: "all .4s ease",
     zIndex: 10,
-    ["&.animate"]: {
-      opacity: 1,
-      transform: "translateY(0)",
-    },
   },
   logo: {
     [theme.breakpoints.down("xs")]: {
@@ -151,19 +144,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Nav() {
-  const [animate, setAnimate] = useState<boolean>(false);
   const [navActive, setNavActive] = useState<boolean>(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setAnimate(true);
-    }, 200);
-  }, []);
   const classes = useStyles();
   return (
-    <Box
-      className={animate ? classes.nav + " animate" : classes.nav}
-      component="nav"
-    >
+    <Box className={classes.nav} component="nav">
       <Container className={classes.navContainer}>
         <a href="#home" className={classes.logo}>
           <Image

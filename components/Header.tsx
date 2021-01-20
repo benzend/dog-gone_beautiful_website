@@ -8,17 +8,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     height: "70vh",
-    opacity: 0,
-    transform: "translateX(10px)",
-    transition: "all .3s ease",
     [theme.breakpoints.down("sm")]: {
       height: "600px",
     },
     [theme.breakpoints.down("xs")]: {},
-    ["&.animate"]: {
-      opacity: 1,
-      transform: "translateX(0)",
-    },
   },
   headerImage: {
     borderRadius: 14,
