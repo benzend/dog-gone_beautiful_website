@@ -59,11 +59,11 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 27,
     transition: "all .3s ease",
     ["&:hover"]: {
-      boxShadow: "10px 10px 10px #0004",
+      boxShadow: "50px 50px 30px #0002",
       transform: "scale(1.05)",
     },
     ["&:active"]: {
-      boxShadow: "8px 8px 8px #0004",
+      boxShadow: "35px 35px 20px #0003",
       transform: "scale(1.03)",
     },
     [theme.breakpoints.down("xs")]: {
