@@ -32,6 +32,14 @@ export default function Home() {
     <div className={classes.root}>
       <Head>
         <title>Dog-Gone Beautiful</title>
+        <meta
+          name="description"
+          content="I have been Professionally Grooming Dogs for the past Ten Years, making them look beautiful and squeaky clean! Give me a call today!"
+        />
+        <meta
+          name="keywords"
+          content="Grooming, Groomer, Dogs, Dog, Poodles, Poodle, Pitbulls, Pitbull, Clean, Beautiful, Pretty, Chiwawas, Professional, Services, Dog-Gone Beautiful"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
