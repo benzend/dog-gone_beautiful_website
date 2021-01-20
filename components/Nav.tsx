@@ -19,10 +19,12 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     padding: "1rem",
     opacity: 0,
+    transform: "translateY(-50px)",
     transition: "all .4s ease",
     zIndex: 10,
     ["&.animate"]: {
       opacity: 1,
+      transform: "translateY(0)",
     },
   },
   logo: {
@@ -163,7 +165,7 @@ export default function Nav() {
   useEffect(() => {
     setTimeout(() => {
       setAnimate(true);
-    }, 300);
+    }, 200);
   }, []);
   const classes = useStyles();
   return (

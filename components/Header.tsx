@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "70vh",
     opacity: 0,
+    transform: "translateX(10px)",
     transition: "all .3s ease",
     [theme.breakpoints.down("sm")]: {
       height: "600px",
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {},
     ["&.animate"]: {
       opacity: 1,
+      transform: "translateX(0)",
     },
   },
   headerImage: {
