@@ -77,7 +77,11 @@ export default function Header() {
     }, 200);
   }, []);
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
       <Box
         id="home"
         component="header"

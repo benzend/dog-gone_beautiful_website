@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Container, Divider, Grid, makeStyles } from "@material-ui/core";
+import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -71,48 +72,54 @@ const useStyles = makeStyles((theme) => ({
 export default function AboutSection() {
   const classes = useStyles();
   return (
-    <Box id="about" className={classes.section} component="section">
-      <div className={classes.bg}></div>
-      <Container>
-        <Grid container className={classes.content}>
-          <Grid className={classes.image} item>
-            <Image
-              src="/images/dog-on_pitbull.jpg"
-              width={400}
-              height={400}
-              alt="pitbull for dog-gone"
-            />
-          </Grid>
-          <Grid className={classes.textContainer} item>
-            <Grid container>
-              <Grid item>
-                <h2 className={classes.title}>What I Do</h2>
-                <Divider />
-              </Grid>
-              <Grid item>
-                <p className={classes.text}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dignissimos animi debitis obcaecati architecto?
-                </p>
-                <p className={classes.text}>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Harum porro nihil fuga placeat veniam officia reprehenderit
-                  accusantium recusandae.
-                </p>
-                <p className={classes.text}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Inventore
-                </p>
-              </Grid>
-              <Grid item>
-                <Link href="/about">
-                  <div className={classes.button}>More About Me</div>
-                </Link>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
+      <Box id="about" className={classes.section} component="section">
+        <div className={classes.bg}></div>
+        <Container>
+          <Grid container className={classes.content}>
+            <Grid className={classes.image} item>
+              <Image
+                src="/images/dog-on_pitbull.jpg"
+                width={400}
+                height={400}
+                alt="pitbull for dog-gone"
+              />
+            </Grid>
+            <Grid className={classes.textContainer} item>
+              <Grid container>
+                <Grid item>
+                  <h2 className={classes.title}>What I Do</h2>
+                  <Divider />
+                </Grid>
+                <Grid item>
+                  <p className={classes.text}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos animi debitis obcaecati architecto?
+                  </p>
+                  <p className={classes.text}>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Harum porro nihil fuga placeat veniam officia reprehenderit
+                    accusantium recusandae.
+                  </p>
+                  <p className={classes.text}>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Inventore
+                  </p>
+                </Grid>
+                <Grid item>
+                  <Link href="/about">
+                    <div className={classes.button}>More About Me</div>
+                  </Link>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </motion.div>
   );
 }

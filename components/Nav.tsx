@@ -149,7 +149,11 @@ export default function Nav() {
   const classes = useStyles();
   return (
     <Box className={classes.nav} component="nav">
-      <motion.div initial={{ y: -400 }} animate={{ y: 0 }}>
+      <motion.div
+        initial={{ y: -400 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 2, delay: 2 }}
+      >
         <Container className={classes.navContainer}>
           <a href="#home" className={classes.logo}>
             <Image
