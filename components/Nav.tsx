@@ -148,8 +148,8 @@ export default function Nav() {
   const [navActive, setNavActive] = useState<boolean>(false);
   const classes = useStyles();
   return (
-    <motion.div initial={{ y: -400 }} animate={{ y: 0 }}>
-      <Box className={classes.nav} component="nav">
+    <Box className={classes.nav} component="nav">
+      <motion.div initial={{ y: -400 }} animate={{ y: 0 }}>
         <Container className={classes.navContainer}>
           <a href="#home" className={classes.logo}>
             <Image
@@ -218,7 +218,7 @@ export default function Nav() {
             </Box>
           </Box>
         </Container>
-      </Box>
-    </motion.div>
+      </motion.div>
+    </Box>
   );
 }
