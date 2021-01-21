@@ -6,6 +6,7 @@ import AboutSection from "../components/AboutSection";
 import SatisfiedDogsSection from "../components/SatisfiedDogsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+import theme from "../utils/theme";
 
 const useStyles = makeStyles({
   root: {
@@ -22,6 +23,7 @@ export default function Home() {
           name="description"
           content="I have been Professionally Grooming Dogs for the past Ten Years, making them look beautiful and squeaky clean! Give me a call today!"
         />
+        <meta name="theme-color" content={theme.palette.primary.main} />
         <meta
           name="keywords"
           content="Grooming, Groomer, Dogs, Dog, Poodles, Poodle, Pitbulls, Pitbull, Clean, Beautiful, Pretty, Chiwawas, Professional, Services, Dog-Gone Beautiful"

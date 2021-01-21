@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Box, Container, makeStyles } from "@material-ui/core";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -76,21 +77,23 @@ export default function Header() {
     }, 200);
   }, []);
   return (
-    <Box
-      id="home"
-      component="header"
-      className={animate ? classes.root + " animate" : classes.root}
-    >
-      <Container>
-        <div className={classes.headerImage}></div>
-        <h1 className={classes.headerText}>
-          Come and get your dog beautified here!
-        </h1>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <Box
+        id="home"
+        component="header"
+        className={animate ? classes.root + " animate" : classes.root}
+      >
+        <Container>
+          <div className={classes.headerImage}></div>
+          <h1 className={classes.headerText}>
+            Come and get your dog beautified here!
+          </h1>
 
-        <Link href="#contact">
-          <div className={classes.headerButton}>Get in Touch</div>
-        </Link>
-      </Container>
-    </Box>
+          <Link href="#contact">
+            <div className={classes.headerButton}>Get in Touch</div>
+          </Link>
+        </Container>
+      </Box>
+    </motion.div>
   );
 }
