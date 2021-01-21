@@ -80,7 +80,7 @@ export default function Header() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 0.5 }}
     >
       <Box
         id="home"

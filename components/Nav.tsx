@@ -152,7 +152,7 @@ export default function Nav() {
       <motion.div
         initial={{ y: -400 }}
         animate={{ y: 0 }}
-        transition={{ duration: 2, delay: 2 }}
+        transition={{ duration: 0.4, delay: 1 }}
       >
         <Container className={classes.navContainer}>
           <a href="#home" className={classes.logo}>

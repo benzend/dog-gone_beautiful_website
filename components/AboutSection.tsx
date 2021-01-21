@@ -75,7 +75,7 @@ export default function AboutSection() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 0.5 }}
     >
       <Box id="about" className={classes.section} component="section">
         <div className={classes.bg}></div>
