@@ -196,16 +196,32 @@ export default function Nav() {
             </div>
           </Box>
           <Box className={classes.navPageLinks}>
-            <a onClick={() => setNavActive((prev) => !prev)} href="#home">
+            <a
+              aria-label="home link"
+              onClick={() => setNavActive((prev) => !prev)}
+              href="#home"
+            >
               <div className={classes.navPageLink}>Home</div>
             </a>
-            <a onClick={() => setNavActive((prev) => !prev)} href="#about">
+            <a
+              aria-label="about section link"
+              onClick={() => setNavActive((prev) => !prev)}
+              href="#about"
+            >
               <div className={classes.navPageLink}>About</div>
             </a>
-            <a onClick={() => setNavActive((prev) => !prev)} href="#services">
+            <a
+              aria-label="satisfaction section link"
+              onClick={() => setNavActive((prev) => !prev)}
+              href="#services"
+            >
               <div className={classes.navPageLink}>Satisfaction</div>
             </a>
-            <a onClick={() => setNavActive((prev) => !prev)} href="#contact">
+            <a
+              aria-label="contact section link"
+              onClick={() => setNavActive((prev) => !prev)}
+              href="#contact"
+            >
               <div className={classes.navPageLink}>Contact</div>
             </a>
           </Box>
@@ -214,7 +230,7 @@ export default function Nav() {
               href="https://www.facebook.com/DogGoneBeautifulID/"
               target="_blank"
             >
-              <IconButton>
+              <IconButton aria-label="facebook button link">
                 <Facebook />
               </IconButton>
             </a>

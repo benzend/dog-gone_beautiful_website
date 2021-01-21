@@ -7,6 +7,7 @@ import SatisfiedDogsSection from "../components/SatisfiedDogsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import theme from "../utils/theme";
+import { useViewportScroll } from "framer-motion";
 
 const useStyles = makeStyles({
   root: {
@@ -14,6 +15,7 @@ const useStyles = makeStyles({
   },
 });
 export default function Home() {
+  const { scrollY } = useViewportScroll();
   const classes = useStyles();
   return (
     <div className={classes.root}>

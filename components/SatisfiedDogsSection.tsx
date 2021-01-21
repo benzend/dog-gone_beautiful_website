@@ -1,4 +1,5 @@
 import { Box, Container, Grid, makeStyles } from "@material-ui/core";
+import { motion } from "framer-motion";
 import DogCard from "./DogCard";
 const useStyles = makeStyles((theme) => ({
   root: {
