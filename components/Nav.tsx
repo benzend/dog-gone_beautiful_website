@@ -148,81 +148,79 @@ export default function Nav() {
   const [navActive, setNavActive] = useState<boolean>(false);
   const classes = useStyles();
   return (
-    <Box className={classes.nav} component="nav">
-      <motion.div
-        initial={{ y: -400 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.4, delay: 1 }}
-      >
-        <Container className={classes.navContainer}>
-          <a href="#home" className={classes.logo}>
-            <Image
-              src="/images/dog-on_logo.jpg"
-              alt="dog-gone logo"
-              width="121px"
-              height="121px"
-            />
-          </a>
-          <Box
-            className={
-              navActive ? classes.navLinks + " active" : classes.navLinks
-            }
-          >
-            <Box className={classes.hamburger}>
+    <motion.nav
+      className={classes.nav}
+      initial={{ y: -500 }}
+      animate={{ y: 0 }}
+    >
+      <Container className={classes.navContainer}>
+        <a href="#home" className={classes.logo}>
+          <Image
+            src="/images/dog-on_logo.jpg"
+            alt="dog-gone logo"
+            width="121px"
+            height="121px"
+          />
+        </a>
+        <Box
+          className={
+            navActive ? classes.navLinks + " active" : classes.navLinks
+          }
+        >
+          <Box className={classes.hamburger}>
+            <div
+              className={classes.hamLines}
+              onClick={() => setNavActive((prev) => !prev)}
+            >
               <div
-                className={classes.hamLines}
-                onClick={() => setNavActive((prev) => !prev)}
-              >
-                <div
-                  className={
-                    navActive
-                      ? classes.hamLineTop + " active"
-                      : classes.hamLineTop
-                  }
-                ></div>
-                <div
-                  className={
-                    navActive
-                      ? classes.hamLineMiddle + " active"
-                      : classes.hamLineMiddle
-                  }
-                ></div>
-                <div
-                  className={
-                    navActive
-                      ? classes.hamLineBottom + " active"
-                      : classes.hamLineBottom
-                  }
-                ></div>
-              </div>
-            </Box>
-            <Box className={classes.navPageLinks}>
-              <a onClick={() => setNavActive((prev) => !prev)} href="#home">
-                <div className={classes.navPageLink}>Home</div>
-              </a>
-              <a onClick={() => setNavActive((prev) => !prev)} href="#about">
-                <div className={classes.navPageLink}>About</div>
-              </a>
-              <a onClick={() => setNavActive((prev) => !prev)} href="#services">
-                <div className={classes.navPageLink}>Satisfaction</div>
-              </a>
-              <a onClick={() => setNavActive((prev) => !prev)} href="#contact">
-                <div className={classes.navPageLink}>Contact</div>
-              </a>
-            </Box>
-            <Box className={classes.socialNavLinks}>
-              <a
-                href="https://www.facebook.com/DogGoneBeautifulID/"
-                target="_blank"
-              >
-                <IconButton>
-                  <Facebook />
-                </IconButton>
-              </a>
-            </Box>
+                className={
+                  navActive
+                    ? classes.hamLineTop + " active"
+                    : classes.hamLineTop
+                }
+              ></div>
+              <div
+                className={
+                  navActive
+                    ? classes.hamLineMiddle + " active"
+                    : classes.hamLineMiddle
+                }
+              ></div>
+              <div
+                className={
+                  navActive
+                    ? classes.hamLineBottom + " active"
+                    : classes.hamLineBottom
+                }
+              ></div>
+            </div>
           </Box>
-        </Container>
-      </motion.div>
-    </Box>
+          <Box className={classes.navPageLinks}>
+            <a onClick={() => setNavActive((prev) => !prev)} href="#home">
+              <div className={classes.navPageLink}>Home</div>
+            </a>
+            <a onClick={() => setNavActive((prev) => !prev)} href="#about">
+              <div className={classes.navPageLink}>About</div>
+            </a>
+            <a onClick={() => setNavActive((prev) => !prev)} href="#services">
+              <div className={classes.navPageLink}>Satisfaction</div>
+            </a>
+            <a onClick={() => setNavActive((prev) => !prev)} href="#contact">
+              <div className={classes.navPageLink}>Contact</div>
+            </a>
+          </Box>
+          <Box className={classes.socialNavLinks}>
+            <a
+              href="https://www.facebook.com/DogGoneBeautifulID/"
+              target="_blank"
+            >
+              <IconButton>
+                <Facebook />
+              </IconButton>
+            </a>
+          </Box>
+        </Box>
+      </Container>
+    </motion.nav>
   );
 }
