@@ -157,8 +157,8 @@ export default function Nav() {
   return (
     <motion.nav
       className={classes.nav}
-      initial={{ y: -500 }}
-      animate={{ y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
       <Container className={classes.navContainer}>
         <a href="#home" className={classes.logo}>
