@@ -92,22 +92,23 @@ export default function AboutSection() {
             <Grid className={classes.textContainer} item>
               <Grid container>
                 <Grid item>
-                  <h2 className={classes.title}>What I Do</h2>
+                  <h2 className={classes.title}>My Mission</h2>
                   <Divider />
                 </Grid>
                 <Grid item>
                   <p className={classes.text}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dignissimos animi debitis obcaecati architecto?
+                    <span className="bold">My mission is simple</span> and that
+                    is to give each and every animal the <em>cleanest</em> and
+                    most <em>comfortable</em> grooming experience imaginable.
                   </p>
                   <p className={classes.text}>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Harum porro nihil fuga placeat veniam officia reprehenderit
-                    accusantium recusandae.
+                    I treat and care for each animal as if they were my own, and
+                    use the best grooming techniques and products for them, as
+                    they deserve the best!
                   </p>
                   <p className={classes.text}>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Inventore
+                    Doing this is just something that I love! As an highly
+                    experienced groomer, I never disappoint!
                   </p>
                 </Grid>
                 <Grid item>

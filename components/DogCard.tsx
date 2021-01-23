@@ -1,7 +1,20 @@
-import { Box, Card, CardContent, CardMedia } from "@material-ui/core";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  CardHeader,
+} from "@material-ui/core";
 import { motion } from "framer-motion";
 
-export default function DogCard({ classes, imageStyle }: any) {
+export default function DogCard({
+  classes,
+  imageStyle,
+  text,
+  text2,
+  text3,
+  name,
+}: any) {
   return (
     <motion.div whileHover={{ scale: 1.05 }}>
       <Card className={classes.card}>
@@ -9,16 +22,11 @@ export default function DogCard({ classes, imageStyle }: any) {
           <CardMedia>
             <div className={imageStyle}></div>
           </CardMedia>
+          <h3>{name}</h3>
           <Box className={classes.textContainer}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos animi debitis obcaecati architecto?
-            </p>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum
-              porro nihil fuga placeat veniam officia reprehenderit accusantium
-              recusandae.
-            </p>
+            <p>{text}</p>
+            <p>{text2}</p>
+            <p>{text3}</p>
           </Box>
         </CardContent>
       </Card>

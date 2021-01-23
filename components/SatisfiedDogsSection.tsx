@@ -44,8 +44,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textContainer: {
-    padding: "0 3rem",
-    textAlign: "center",
     color: "#444",
   },
 }));
@@ -57,13 +55,33 @@ export default function SatisfiedDogsSection() {
         <h2 className={classes.title}>Meet My Satisfied Dogs</h2>
         <Grid spacing={3} justify="center" alignItems="center" container>
           <Grid item>
-            <DogCard classes={classes} imageStyle={classes.card1Image} />
+            <DogCard
+              classes={classes}
+              imageStyle={classes.card1Image}
+              name="Fluffy"
+              text="The owner was extremely satisfied with how his boy turned out!"
+              text2="He came in a complete mess but came out with a shimmering white coat that put sparkles in our eyes."
+              text3="They definitely walked out happy that day!"
+            />
           </Grid>
           <Grid item>
-            <DogCard classes={classes} imageStyle={classes.card2Image} />
+            <DogCard
+              classes={classes}
+              imageStyle={classes.card2Image}
+              name="Sparky"
+              text="A sweety little puppy that never gives me a hard time!"
+              text2="Sparky tends to just love being groomed and the owners are such kind, sweet people. I love all of them with all my heart!"
+            />
           </Grid>
           <Grid item>
-            <DogCard classes={classes} imageStyle={classes.card3Image} />
+            <DogCard
+              classes={classes}
+              imageStyle={classes.card3Image}
+              name="Denny"
+              text="Denny is a casual who also loves the shop. I love giving him treats and playing around with him and his coat is so fluffy and nice!"
+              text2="The first time the owners came in, they told me they're looking for a new place to groom there dog."
+              text3="I've been seeing them ever since!"
+            />
           </Grid>
         </Grid>
       </Container>

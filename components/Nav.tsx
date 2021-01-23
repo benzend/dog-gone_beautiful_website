@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
   nav: {
-    position: "sticky",
-    top: 0,
-    left: 0,
+    // position: "sticky",
+    // top: 0,
+    // left: 0,
     padding: "1rem",
     zIndex: 10,
   },
