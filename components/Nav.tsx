@@ -131,7 +131,7 @@ const useStyles = makeStyles((theme) => ({
       width: "15px",
       transform: "rotate(-45deg)",
       top: "10px",
-      left: "8px",
+      left: "7px",
     },
   },
   hamLineBottom: {
