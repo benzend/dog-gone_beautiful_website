@@ -7,11 +7,13 @@ import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
   nav: {
-    // position: "sticky",
-    // top: 0,
-    // left: 0,
     padding: "1rem",
-    zIndex: 10,
+    [theme.breakpoints.down("xs")]: {
+      position: "sticky",
+      top: 0,
+      left: 0,
+      zIndex: 20,
+    },
   },
   logo: {
     [theme.breakpoints.down("xs")]: {
@@ -89,8 +91,9 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
       alignItems: "center",
       position: "fixed",
-      top: "10px",
+      top: "14px",
       right: "10px",
+      zIndex: 20,
     },
   },
   hamLines: {
@@ -101,6 +104,7 @@ const useStyles = makeStyles((theme) => ({
     left: "-10px",
     height: "40px",
     width: "40px",
+    zIndex: 20,
   },
   hamLineTop: {
     position: "absolute",
@@ -108,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
     width: "30px",
     height: "3px",
     transition: "all .3s ease",
+    zIndex: 20,
 
     ["&.active"]: {
       transform: "rotate(90deg)",
@@ -120,6 +125,7 @@ const useStyles = makeStyles((theme) => ({
     width: "30px",
     height: "3px",
     transition: "all .3s ease",
+    zIndex: 20,
 
     ["&.active"]: {
       width: "15px",
@@ -135,6 +141,7 @@ const useStyles = makeStyles((theme) => ({
     width: "30px",
     height: "3px",
     transition: "all .3s ease",
+    zIndex: 20,
     ["&.active"]: {
       width: "15px",
       transform: "rotate(45deg)",
